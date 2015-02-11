@@ -5,7 +5,8 @@
 <meta charset="utf-8">
 
 <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
 
 <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
@@ -19,9 +20,12 @@
 <body class="grid-container">
 	<header>
 		<nav class='topbar row'>
-			<a href="menu"><img class='col-1' src=''></a>
-			<h1 class = 'banner text-center col-3'>EL NOTICARIO</h1>
-			<input type='search' class='search col-1' role='search'>
+			<a href="menu" class="col-1"><img class='menu' src='images/menu.png'></a>
+			<div class='ELN'>
+				<h1 class = 'banner text-center col-3'>El Noticario</h1>
+			</div>
+			<input type='search' class='search col-1' role='search' placeholder="buscar">
+
 		</nav>
 		<nav class='tabs row'>
 			<ul class='nav col-5'>
@@ -99,7 +103,7 @@
 		</div>
 
 
-		<div class='row'>
+		<div class='row articlestuff'>
 			<div class="col-1"></div>
 			<div class='text col-3' id='text'>
 				<p>MAS PROFETICAS aún fueron sus palabras del 22 de agosto de 1968, apenas horas después de que unos doscientos mil soldados y más de dos mil tanques de cinco naciones del Pacto de Varsovia invadieran Checoslovaquia para poner fin a las reformas democráticas promovidas por Alexander Dubcek. Allende, que había visitado este país y otros de la órbita soviética dos años antes, intervino en el Senado para condenar “enérgicamente” la agresión militar que puso fin a la Primavera de Praga. Denunció, eso sí, la hipocresía de la derecha chilena, que se rasgaba las vestiduras por Checoslovaquia, pero callaba ante Vietnam. 
@@ -124,7 +128,7 @@
 	<div class="author row">
 		<span class="col-2"><img class="author" src="images/autor.jpg"></span>
 		<div class="col-3">
-			<p class="author said" id="text">Mario Amorós es periodista y doctor en Historia. Su último libro, Allende. La biografía (Ediciones B), fue elegida mejor biografía sobre personaje no español de 2013 por especialistas de Historia.</p>
+			<p class="author said">Mario Amorós es periodista y doctor en Historia. Su último libro, Allende. La biografía (Ediciones B), fue elegida mejor biografía sobre personaje no español de 2013 por especialistas de Historia.</p>
 		</div>
 	</div>
 	<form class = 'row comments'>
@@ -133,8 +137,8 @@
 				</div>
 			</div>
 			<div class='row'>
-				<div class='col-5'>
-					<textarea id='comment' rows='10'cols='150' maxlength='1500' placeholder="Escribe Aquí"></textarea>
+				<div class='col-5 textarea'>
+					<textarea id='comment' rows='10'cols='130' maxlength='1500' placeholder="Escribe Aquí"></textarea>
 				</div>
 			</div>
 			<div class='row'>
@@ -174,7 +178,7 @@
 	<footer>
 		<div class='container-fluid'>
 			<div class='row'>
-				<div class='col-5'>
+				<div class='col-5 advert'>
 					<img class='adTuenti' alt="adTuenti" src='images/tuenti.png'>
 				</div>
 			</div>
@@ -185,7 +189,7 @@
 					<img class='socialMedia' alt='Social Media Links' src='images/socialmedia.png'>
 				</div>
 				<div class='col-3'>
-						<h2 class = 'banner'>EL NOTICARIO</h2>
+						<h2 class = 'bannerBottom'>El Noticario</h2>
 				</div>
 					<div class='col-1'>
 						<span class="weather">15*</span>

@@ -11,6 +11,8 @@
 
 body{
 	margin:0;
+	font-family:'garamond';
+	background-color: #f3f3f3;
 }
 
 /* ----- grid ------*/
@@ -56,6 +58,8 @@ body{
 	.col-4,
 	.col-5{width:100%;}
 
+
+
 /* --- clearfix --- */
 .row:before,
 .row:after{
@@ -71,6 +75,7 @@ body{
 	/*--gutter--*/
 	padding: 0;
 }
+
 }
 
 @media all and (max-width: 650px){
@@ -105,23 +110,34 @@ color: #ffffff;
 margin:0;
 text-align:center;
 font-family: 'garamond';
+height: 50px;
 }
 
 .search{
 float:right;
-width:20%;
-display:inline;
-vertical-align:middle;
+width:15%;
+position:absolute;
+top:17px;
+right:2%;
 }
+
 
 .menu{
+	height:37px;
+	width:auto;
 	float:left;
+	padding-left:5%;
+	position:relative;
+	top:7px;
 }
 
+
 .banner{
-font-family: "oswald";
+font-family: "UnifrakturMaguntia";
 font-size: 36px;
 color: #ffffff;
+position:absolute;
+left: 20%;
 }
 
 .top-menu{
@@ -129,10 +145,13 @@ color: #ffffff;
 }
 
 .tabs{
-	height: 50px;
+	height: 30px;
 	color:white;
 	font-size: 1.1em;
-	padding: 2%;
+	padding-top: 1.5%;
+	padding-left: 5%;
+	margin-bottom: 2%;
+	border-bottom: 4px solid black;
 	li{
 		padding: 0 2%;
 		:hover{
@@ -142,11 +161,9 @@ color: #ffffff;
 	}
 	a{
 		text-decoration:none;
-		font-family: 'garamond';
-		color:black;
-		:active{
-		color:yellow;
-		}
+		font-family: 'oswald';
+		font-weight:300;
+		color:#A30000;
 
 	}
 }
@@ -166,14 +183,13 @@ color:#000000;
 }
 
 .where{
-background-color: #f3f3f3;
 font-family: "garamond";
 font-size:16px !important;
-padding: 2%;
+padding: 2% 0 1% 7%;
 	li{
 	display:inline-block;
 	float:left;
-	padding: 0 2%;
+	padding: 0 1%;
 	}
 	a{
 	color:black;
@@ -252,7 +268,8 @@ div.author{
 	height:100%;
 	vertical-align: middle;
 	text-align:center;
-	margin: 0 5%;
+	margin: 5% 15%;
+	@include border-radius(5px);
 	p{
 		font-size: 1.1em;
 	font-family: "garamond";
@@ -285,24 +302,39 @@ textarea{
 	max-width:100%;
 }
 
+.textarea{
+	text-align:center;
+	padding: 2%;
+}
+
+.articlestuff{
+	border-bottom: 1px solid #66666A;
+}
 
 /*----Comments -----*/
 
 .comments{
 	padding:5%;
+	textarea{
+		@include border-radius(5px);
+	}
 	input{
 		position:relative;
 		left: 80%;
-		background-color:#fff0000;
 		border-style:none;
 		color:white;
-		height: 50px;
+		height: 30px;
 		width: 80px;
+		background-color:#A30000;
+		@include border-radius(5px);
+		@include box-shadow(#000000 2px 2px 10px);
 	}
 }
 
 h3{
 	font-family: "garamond";
+	position:relative;
+	left:10%;
 
 }
 
@@ -332,12 +364,12 @@ h3{
 	margin: 0 5%;
 }
 
-#submitButton{
-	@include background-image(radial-gradient(45px 85px, red 1px, #990000 30px));
-}
 
 /*-----Advertisement ----*/
 
+.advert{
+	text-align:center;
+}
 .adTuenti{
 	height:auto;
 	max-width:100%;
@@ -348,24 +380,42 @@ h3{
 /*-----Footer-----*/
 
 .socialMedia,.weather{
-	height:auto;
 	max-width:100%;
 	float:left;
+	padding-left: 5%;
+	position:relative;
+	top: 10px;
 }
 
 .weather{
 	float:right;
+	font-size: 2em;
+	padding-right: 5%;
+	font-family: 'garamond';
+	bottom: 5%;
 }
 
-.bottomBar .banner{
+.bottomBar{
 	bottom:5%;
 	text-align:center;
 	margin:none;
-	padding:none
+	padding:none;
 }
 
-body{
-	background-color: #f3f3f3;
+.bannerBottom{
+	font-family:"UnifrakturMaguntia";
+	font-size:36px;
 }
+
+/* ---- queries ---- */
+
+@media all and (max-width:600px){
+
+.tabs{
+	font-size: 0.72em;
+}
+
+}
+
 
 
