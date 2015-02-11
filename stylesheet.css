@@ -1,0 +1,208 @@
+
+
+article.container{
+padding:10%;
+}
+
+
+/*----navigation-----*/
+
+.topbar, .bottomBar div{
+background-color:#000000;
+color: #ffffff;
+margin:0;
+}
+
+.search{
+position:relative;
+top: 20px;
+}
+
+.menu{
+position:relative;
+top: 40px;
+}
+
+.banner{
+font-family: "garamond";
+font-size: 36px;
+color: #ffffff;
+}
+
+.navbar{
+	font-family: "lato";
+	padding-top: 1.5%;
+	font-size:16px !important;
+}
+
+li.active{
+	background: transparent;
+}
+
+/*-----Start of Article -----*/
+
+h1.title{
+font-family:"garamond";
+font-weight:bold;
+font-size: 8vh;
+color:#000000;
+}
+
+.where{
+background-color: #f3f3f3;
+font-family: "lato";
+font-size:16px !important;
+}
+
+.stalinSpeakingPicture{
+margin: 0 auto;
+width:110%;
+}
+
+/*-------text ------ */
+
+p{
+font-family:"lato";
+color: #000000;
+padding:5% 5%;
+font-weight: 300;
+}
+
+article {
+ font-size: 12px;
+ text-align:left;
+}
+h1,h2,h3,h4,h5,h6,p {
+ line-height: 1.55;
+}
+h1 { font-size: 4em; }
+h2 { font-size: 3em; }
+h3 { font-size: 2em; }
+
+
+/* ----- images ----- */
+
+img.twoFriends{
+height:auto;
+max-width:50%;
+margin:0 0 5% 5%;
+}
+
+img.car{
+	height: auto;
+	width: 40%;
+	margin: 0 5% 5% 0;
+}
+
+img.twoFriendsAgain{
+	height:auto;
+	width:50%;
+	margin: 0 5% 5% 0;
+}
+
+img.stalinFamily{
+	height:auto;
+	width: 50%;
+	margin: 0 0 5% 5%;
+}
+
+/*----- Author ----*/
+
+div.author{
+padding:5%;
+background-color: black;
+height:100%;
+vertical-align: middle;
+}
+
+img.author{
+width:auto;
+height: 300px;
+margin: 0 auto;
+
+}
+
+p.author{
+font-size: 22px;
+font-family: "lato";
+margin: 10% 2% 2% 5%;
+color:white;
+}
+
+/*-----Form -----*/
+
+h3{
+font-size: 30px;
+font-weight:bold;
+font-family:"lato";
+}
+
+textarea{
+height:auto;
+max-width:100%;
+}
+
+
+/*----Comments -----*/
+
+.comments{
+padding:5%;
+}
+
+h3{
+font-family: "garamond";
+
+}
+
+.name{
+font-size:27px;
+font-family:"garamond";
+color:#000000;
+}
+
+.dateTime{
+font-size:24px;
+font-weight:bold;
+font-family:"garamond";
+color:#0f0f0f0;
+}
+
+.whatPedroSaid, .whatLaurenSaid{
+font-size:23px;
+font-family:"lato";
+color:#000000;
+}
+
+.comment{
+border-top: 2px solid black;
+}
+
+/*-----Advertisement ----*/
+
+.adTuenti{
+height:auto;
+max-width:100%;
+padding:none;
+margin:none;
+}
+
+/*-----Footer-----*/
+
+.socialMedia,.weather{
+height:auto;
+max-width:100%;
+}
+
+.bottomBar .banner{
+position:absolute:
+bottom:5%;
+text-align:center;
+margin:none;
+padding:none
+}
+
+body{
+	background-color: #f3f3f3;
+}
+
+

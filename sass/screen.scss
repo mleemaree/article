@@ -1,0 +1,302 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+
+/* ------ global ----- */
+
+body{
+	padding:0;
+	margin:0;
+}
+
+/* ----- grid ------*/
+
+.grid-container{
+	width: 100%;
+	max-width:2400px;
+}
+
+.grid-container*{
+	box-sizing:border-box;
+}
+
+/* --- clearfix --- */
+.row:before,
+.row:after{
+	content: "";
+	display:table;
+	clear:both;
+}
+
+[class*='col-']{
+	float:left;
+	min-height: 1px;
+	width:20%;
+	/*--gutter--*/
+	padding: 0;
+}
+
+.col-1{width:20%;}
+.col-2{width:40%;}
+.col-3{width:60%;}
+.col-4{width:80%;}
+.col-5{width:100%;}
+
+
+/*------responsive-----*/
+
+@media all and (max-width:800px){
+	.col-1{width:33.33%;}
+	.col-2{width:66.67%;}
+	.col-3{width:100%;}
+}
+
+@media all and (max-width: 650px){
+	.col-1{width:50%;}
+	.col-2,
+	.col-3,
+	.col-4,
+	.col-5{width:100%;}
+}
+
+/*----navigation-----*/
+
+.topbar, .bottomBar div{
+background-color:#000000;
+color: #ffffff;
+margin:0;
+text-align:center;
+font-family: 'lato';
+}
+
+.search{
+float:right;
+
+}
+
+.menu{
+	float:left;
+}
+
+.banner{
+font-family: "garamond";
+font-size: 36px;
+color: #ffffff;
+}
+
+.top-menu{
+	display:inline-block;
+}
+
+.tabs{
+	background-color: gray;
+	height: 50px;
+	color:white;
+	font-size: 1.2em;
+	color:white;
+}
+
+/*-----Start of Article -----*/
+
+h1.title{
+font-family:"garamond";
+font-weight:bold;
+font-size: 8vh;
+color:#000000;
+}
+
+.where{
+background-color: #f3f3f3;
+font-family: "lato";
+font-size:16px !important;
+	li{
+	display:inline-block;
+	float:left;
+	padding: 0 2%;
+	}
+}
+
+.stalinSpeakingPicture{
+margin: 0 auto;
+width:100%;
+}
+
+.articleTitle{
+	text-align:center;
+}
+
+/*-------text ------ */
+
+p{
+font-family:"lato";
+color: #000000;
+padding:5% 5%;
+font-weight: 300;
+}
+
+article {
+ font-size: 12px;
+ text-align:left;
+}
+h1,h2,h3,h4,h5,h6,p {
+ line-height: 1.55;
+}
+h1 { font-size: 4em; }
+h2 { font-size: 3em; }
+h3 { font-size: 2em; }
+
+
+/* ----- images ----- */
+
+img.twoFriends{
+	height:auto;
+	max-width:63%;
+	float:right;
+	padding:5%;
+}
+
+img.car{
+	height: auto;
+	width: 43%;
+	float:left;
+	padding: 5%; 
+
+}
+
+img.twoFriendsAgain{
+	height:auto;
+	width:63%;
+	float:right;
+	padding:5%;
+}
+
+img.stalinFamily{
+	height:auto;
+	width:63%;
+	float:left;
+	padding: 5%;
+
+
+}
+
+/*----- Author ----*/
+
+div.author{
+	background-color: black;
+	height:100%;
+	vertical-align: middle;
+	text-align:center;
+}
+
+img.author{
+	width:auto;
+	height: 300px;
+	margin: 0 auto;
+	padding-left: 5%;
+
+}
+
+p.author{
+	font-size: 22px;
+	font-family: "lato";
+	margin: 10% 2% 2% 5%;
+	color:white;
+	padding-right: 5%;
+}
+
+/*-----Form -----*/
+
+h3{
+	font-size: 30px;
+	font-weight:bold;
+	font-family:"lato";
+}
+
+textarea{
+	height:auto;
+	max-width:100%;
+}
+
+
+/*----Comments -----*/
+
+.comments{
+	padding:5%;
+	input{
+		position:relative;
+		left: 80%;
+		background-color:#fff0000;
+		border-style:none;
+		color:white;
+		height: 50px;
+		width: 80px;
+	}
+}
+
+h3{
+	font-family: "garamond";
+
+}
+
+.name{
+	font-size:27px;
+	font-family:"garamond";
+	color:#000000;
+}
+
+.dateTime{
+	font-size:24px;
+	font-weight:bold;
+	font-family:"garamond";
+	color:#0f0f0f0;
+}
+
+.whatPedroSaid, .whatLaurenSaid{
+	font-size:23px;
+	font-family:"lato";
+	color:#000000;
+	padding: 5%;
+}
+
+.comment{
+	border-top: 2px solid black;
+	padding:5%;
+}
+
+/*-----Advertisement ----*/
+
+.adTuenti{
+	height:auto;
+	max-width:100%;
+	padding:none;
+	margin:none;
+}
+
+/*-----Footer-----*/
+
+.socialMedia,.weather{
+	height:auto;
+	max-width:100%;
+	float:left;
+}
+
+.weather{
+	float:right;
+}
+
+.bottomBar .banner{
+	bottom:5%;
+	text-align:center;
+	margin:none;
+	padding:none
+}
+
+body{
+	background-color: #f3f3f3;
+}
+
+
