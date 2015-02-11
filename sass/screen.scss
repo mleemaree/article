@@ -10,6 +10,7 @@
 /* ------ global ----- */
 
 body{
+	padding:0;
 	margin:0;
 	font-family:'garamond';
 	background-color: #f3f3f3;
@@ -110,34 +111,42 @@ color: #ffffff;
 margin:0;
 text-align:center;
 font-family: 'garamond';
-height: 50px;
+height: 80px;
 }
 
 .search{
 float:right;
 width:15%;
 position:absolute;
-top:17px;
+top:31px;
 right:2%;
 }
 
+.searcher{
+	float:right;
+	position:absolute;
+	right: 17.5%;
+	height: 21px;
+	top: 5%;
+}
 
 .menu{
 	height:37px;
 	width:auto;
 	float:left;
-	padding-left:5%;
+	padding-left:10%;
 	position:relative;
-	top:7px;
+	top:19px;
 }
 
 
 .banner{
 font-family: "UnifrakturMaguntia";
-font-size: 36px;
+font-size: 3em;
 color: #ffffff;
 position:absolute;
 left: 20%;
+top: 1%;
 }
 
 .top-menu{
@@ -147,6 +156,7 @@ left: 20%;
 .tabs{
 	height: 30px;
 	color:white;
+	text-align:center;
 	font-size: 1.1em;
 	padding-top: 1.5%;
 	padding-left: 5%;
@@ -161,9 +171,12 @@ left: 20%;
 	}
 	a{
 		text-decoration:none;
-		font-family: 'oswald';
+		font-family: 'garamond';
 		font-weight:300;
 		color:#A30000;
+		&.active{
+			color:#0B4970;
+		}
 
 	}
 }
@@ -184,7 +197,7 @@ color:#000000;
 
 .where{
 font-family: "garamond";
-font-size:16px !important;
+font-size:16px;
 padding: 2% 0 1% 7%;
 	li{
 	display:inline-block;
@@ -281,13 +294,15 @@ div.author{
 
 img.author{
 	width:auto;
-	height: 300px;
+	height: 250px;
 	margin: 0 auto;
 	padding: 5%;
 
 }
 
-
+p.author.said{
+	font-size: 18px !important;
+}
 
 /*-----Form -----*/
 
@@ -300,6 +315,8 @@ h3{
 textarea{
 	height:auto;
 	max-width:100%;
+	position:relative;
+	right: 4%;
 }
 
 .textarea{
@@ -409,13 +426,27 @@ h3{
 
 /* ---- queries ---- */
 
+@media all and (max-width:800px){
+
+.tabs{
+	font-size: 0.9em;
+}
+.banner{
+	left:0;
+}
+}
+
 @media all and (max-width:600px){
 
 .tabs{
-	font-size: 0.72em;
+	font-size: 0.63em;
+}
+.banner{
+	font-size: 2em;
+	top: 3.5%;
+}
 }
 
-}
 
 
 
