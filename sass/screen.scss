@@ -70,7 +70,7 @@ background-color:#000000;
 color: #ffffff;
 margin:0;
 text-align:center;
-font-family: 'lato';
+font-family: 'garamond';
 }
 
 .search{
@@ -83,7 +83,7 @@ float:right;
 }
 
 .banner{
-font-family: "garamond";
+font-family: "oswald";
 font-size: 36px;
 color: #ffffff;
 }
@@ -103,7 +103,7 @@ color: #ffffff;
 /*-----Start of Article -----*/
 
 h1.title{
-font-family:"garamond";
+font-family:"oswald";
 font-weight:bold;
 font-size: 8vh;
 color:#000000;
@@ -111,8 +111,9 @@ color:#000000;
 
 .where{
 background-color: #f3f3f3;
-font-family: "lato";
+font-family: "garamond";
 font-size:16px !important;
+padding: 5%;
 	li{
 	display:inline-block;
 	float:left;
@@ -132,7 +133,7 @@ width:100%;
 /*-------text ------ */
 
 p{
-font-family:"lato";
+font-family:"garamond";
 color: #000000;
 padding:5% 5%;
 font-weight: 300;
@@ -202,7 +203,7 @@ img.author{
 
 p.author{
 	font-size: 22px;
-	font-family: "lato";
+	font-family: "oswald";
 	margin: 10% 2% 2% 5%;
 	color:white;
 	padding-right: 5%;
@@ -213,7 +214,7 @@ p.author{
 h3{
 	font-size: 30px;
 	font-weight:bold;
-	font-family:"lato";
+	font-family:"garamond";
 }
 
 textarea{
@@ -257,7 +258,7 @@ h3{
 
 .whatPedroSaid, .whatLaurenSaid{
 	font-size:23px;
-	font-family:"lato";
+	font-family:"garamond";
 	color:#000000;
 	padding: 5%;
 }
