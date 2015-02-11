@@ -4,12 +4,12 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3";
 
 
 /* ------ global ----- */
 
 body{
-	padding:0;
 	margin:0;
 }
 
@@ -52,7 +52,25 @@ body{
 @media all and (max-width:800px){
 	.col-1{width:33.33%;}
 	.col-2{width:66.67%;}
-	.col-3{width:100%;}
+	.col-3,
+	.col-4,
+	.col-5{width:100%;}
+
+/* --- clearfix --- */
+.row:before,
+.row:after{
+	content: "";
+	display:table;
+	clear:both;
+}
+
+[class*='col-']{
+	float:left;
+	min-height: 1px;
+	width:100%;
+	/*--gutter--*/
+	padding: 0;
+}
 }
 
 @media all and (max-width: 650px){
@@ -61,6 +79,22 @@ body{
 	.col-3,
 	.col-4,
 	.col-5{width:100%;}
+
+/* --- clearfix --- */
+.row:before,
+.row:after{
+	content: "";
+	display:table;
+	clear:both;
+}
+
+[class*='col-']{
+	float:left;
+	min-height: 1px;
+	width:100%;
+	/*--gutter--*/
+	padding: 0;
+}
 }
 
 /*----navigation-----*/
@@ -75,7 +109,9 @@ font-family: 'garamond';
 
 .search{
 float:right;
-
+width:20%;
+display:inline;
+vertical-align:middle;
 }
 
 .menu{
@@ -93,14 +129,34 @@ color: #ffffff;
 }
 
 .tabs{
-	background-color: gray;
 	height: 50px;
 	color:white;
-	font-size: 1.2em;
-	color:white;
+	font-size: 1.1em;
+	padding: 2%;
+	li{
+		padding: 0 2%;
+		:hover{
+			color: #A30000;
+		}
+		
+	}
+	a{
+		text-decoration:none;
+		font-family: 'garamond';
+		color:black;
+		:active{
+		color:yellow;
+		}
+
+	}
 }
 
 /*-----Start of Article -----*/
+
+.articleTitle{
+	border-bottom: 1px solid #66666A;
+	margin: 0 5%;
+}
 
 h1.title{
 font-family:"oswald";
@@ -113,12 +169,17 @@ color:#000000;
 background-color: #f3f3f3;
 font-family: "garamond";
 font-size:16px !important;
-padding: 5%;
+padding: 2%;
 	li{
 	display:inline-block;
 	float:left;
 	padding: 0 2%;
 	}
+	a{
+	color:black;
+	text-decoration:none;
+	}
+	
 }
 
 .stalinSpeakingPicture{
@@ -135,7 +196,7 @@ width:100%;
 p{
 font-family:"garamond";
 color: #000000;
-padding:5% 5%;
+padding:5% 2%;
 font-weight: 300;
 }
 
@@ -162,7 +223,7 @@ img.twoFriends{
 
 img.car{
 	height: auto;
-	width: 43%;
+	width: 63%;
 	float:left;
 	padding: 5%; 
 
@@ -191,23 +252,25 @@ div.author{
 	height:100%;
 	vertical-align: middle;
 	text-align:center;
+	margin: 0 5%;
+	p{
+		font-size: 1.1em;
+	font-family: "garamond";
+	margin: 10% 2% 2% 5%;
+	color:white;
+	padding-right: 5%;
+	}
 }
 
 img.author{
 	width:auto;
 	height: 300px;
 	margin: 0 auto;
-	padding-left: 5%;
+	padding: 5%;
 
 }
 
-p.author{
-	font-size: 22px;
-	font-family: "oswald";
-	margin: 10% 2% 2% 5%;
-	color:white;
-	padding-right: 5%;
-}
+
 
 /*-----Form -----*/
 
@@ -264,8 +327,13 @@ h3{
 }
 
 .comment{
-	border-top: 2px solid black;
+	border-top: 1px solid #66666A;
 	padding:5%;
+	margin: 0 5%;
+}
+
+#submitButton{
+	@include background-image(radial-gradient(45px 85px, red 1px, #990000 30px));
 }
 
 /*-----Advertisement ----*/

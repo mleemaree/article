@@ -68,9 +68,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* ------ global ----- */
-/* line 11, ../sass/screen.scss */
+/* line 12, ../sass/screen.scss */
 body {
-  padding: 0;
   margin: 0;
 }
 
@@ -142,26 +141,64 @@ body {
   }
 
   /* line 55, ../sass/screen.scss */
-  .col-3 {
+  .col-3,
+  .col-4,
+  .col-5 {
     width: 100%;
+  }
+
+  /* --- clearfix --- */
+  /* line 60, ../sass/screen.scss */
+  .row:before,
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* line 67, ../sass/screen.scss */
+  [class*='col-'] {
+    float: left;
+    min-height: 1px;
+    width: 100%;
+    /*--gutter--*/
+    padding: 0;
   }
 }
 @media all and (max-width: 650px) {
-  /* line 59, ../sass/screen.scss */
+  /* line 77, ../sass/screen.scss */
   .col-1 {
     width: 50%;
   }
 
-  /* line 60, ../sass/screen.scss */
+  /* line 78, ../sass/screen.scss */
   .col-2,
   .col-3,
   .col-4,
   .col-5 {
     width: 100%;
   }
+
+  /* --- clearfix --- */
+  /* line 84, ../sass/screen.scss */
+  .row:before,
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* line 91, ../sass/screen.scss */
+  [class*='col-'] {
+    float: left;
+    min-height: 1px;
+    width: 100%;
+    /*--gutter--*/
+    padding: 0;
+  }
 }
 /*----navigation-----*/
-/* line 68, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .topbar, .bottomBar div {
   background-color: #000000;
   color: #ffffff;
@@ -170,39 +207,65 @@ body {
   font-family: 'garamond';
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .search {
   float: right;
+  width: 20%;
+  display: inline;
+  vertical-align: middle;
 }
 
-/* line 81, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .menu {
   float: left;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .banner {
   font-family: "oswald";
   font-size: 36px;
   color: #ffffff;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 .top-menu {
   display: inline-block;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .tabs {
-  background-color: gray;
   height: 50px;
   color: white;
-  font-size: 1.2em;
-  color: white;
+  font-size: 1.1em;
+  padding: 2%;
+}
+/* line 136, ../sass/screen.scss */
+.tabs li {
+  padding: 0 2%;
+}
+/* line 138, ../sass/screen.scss */
+.tabs li :hover {
+  color: #A30000;
+}
+/* line 143, ../sass/screen.scss */
+.tabs a {
+  text-decoration: none;
+  font-family: 'garamond';
+  color: black;
+}
+/* line 147, ../sass/screen.scss */
+.tabs a :active {
+  color: yellow;
 }
 
 /*-----Start of Article -----*/
-/* line 105, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
+.articleTitle {
+  border-bottom: 1px solid #66666A;
+  margin: 0 5%;
+}
+
+/* line 161, ../sass/screen.scss */
 h1.title {
   font-family: "oswald";
   font-weight: bold;
@@ -210,68 +273,73 @@ h1.title {
   color: #000000;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .where {
   background-color: #f3f3f3;
   font-family: "garamond";
   font-size: 16px !important;
-  padding: 5%;
+  padding: 2%;
 }
-/* line 117, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 .where li {
   display: inline-block;
   float: left;
   padding: 0 2%;
 }
+/* line 178, ../sass/screen.scss */
+.where a {
+  color: black;
+  text-decoration: none;
+}
 
-/* line 124, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .stalinSpeakingPicture {
   margin: 0 auto;
   width: 100%;
 }
 
-/* line 129, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .articleTitle {
   text-align: center;
 }
 
 /*-------text ------ */
-/* line 135, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 p {
   font-family: "garamond";
   color: #000000;
-  padding: 5% 5%;
+  padding: 5% 2%;
   font-weight: 300;
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 article {
   font-size: 12px;
   text-align: left;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h6, p {
   line-height: 1.55;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 h1 {
   font-size: 4em;
 }
 
-/* line 150, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 h2 {
   font-size: 3em;
 }
 
-/* line 151, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 h3 {
   font-size: 2em;
 }
 
 /* ----- images ----- */
-/* line 156, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 img.twoFriends {
   height: auto;
   max-width: 63%;
@@ -279,15 +347,15 @@ img.twoFriends {
   padding: 5%;
 }
 
-/* line 163, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 img.car {
   height: auto;
-  width: 43%;
+  width: 63%;
   float: left;
   padding: 5%;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 img.twoFriendsAgain {
   height: auto;
   width: 63%;
@@ -295,7 +363,7 @@ img.twoFriendsAgain {
   padding: 5%;
 }
 
-/* line 178, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 img.stalinFamily {
   height: auto;
   width: 63%;
@@ -304,51 +372,51 @@ img.stalinFamily {
 }
 
 /*----- Author ----*/
-/* line 189, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 div.author {
   background-color: black;
   height: 100%;
   vertical-align: middle;
   text-align: center;
+  margin: 0 5%;
 }
-
-/* line 196, ../sass/screen.scss */
-img.author {
-  width: auto;
-  height: 300px;
-  margin: 0 auto;
-  padding-left: 5%;
-}
-
-/* line 204, ../sass/screen.scss */
-p.author {
-  font-size: 22px;
-  font-family: "oswald";
+/* line 256, ../sass/screen.scss */
+div.author p {
+  font-size: 1.1em;
+  font-family: "garamond";
   margin: 10% 2% 2% 5%;
   color: white;
   padding-right: 5%;
 }
 
+/* line 265, ../sass/screen.scss */
+img.author {
+  width: auto;
+  height: 300px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
 /*-----Form -----*/
-/* line 214, ../sass/screen.scss */
+/* line 277, ../sass/screen.scss */
 h3 {
   font-size: 30px;
   font-weight: bold;
   font-family: "garamond";
 }
 
-/* line 220, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 textarea {
   height: auto;
   max-width: 100%;
 }
 
 /*----Comments -----*/
-/* line 228, ../sass/screen.scss */
+/* line 291, ../sass/screen.scss */
 .comments {
   padding: 5%;
 }
-/* line 230, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .comments input {
   position: relative;
   left: 80%;
@@ -359,19 +427,19 @@ textarea {
   width: 80px;
 }
 
-/* line 241, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 h3 {
   font-family: "garamond";
 }
 
-/* line 246, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 .name {
   font-size: 27px;
   font-family: "garamond";
   color: #000000;
 }
 
-/* line 252, ../sass/screen.scss */
+/* line 315, ../sass/screen.scss */
 .dateTime {
   font-size: 24px;
   font-weight: bold;
@@ -379,7 +447,7 @@ h3 {
   color: #0f0f0f0;
 }
 
-/* line 259, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 .whatPedroSaid, .whatLaurenSaid {
   font-size: 23px;
   font-family: "garamond";
@@ -387,14 +455,24 @@ h3 {
   padding: 5%;
 }
 
-/* line 266, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 .comment {
-  border-top: 2px solid black;
+  border-top: 1px solid #66666A;
   padding: 5%;
+  margin: 0 5%;
+}
+
+/* line 335, ../sass/screen.scss */
+#submitButton {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjQ1cHgiIGN5PSI4NXB4IiByPSIzMCUiPjxzdG9wIG9mZnNldD0iMy4zMzMzMyUiIHN0b3AtY29sb3I9IiNmZjAwMDAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5OTAwMDAiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(45px 85px, #ff0000 1px, #990000 30px);
+  background-image: -webkit-radial-gradient(45px 85px, #ff0000 1px, #990000 30px);
+  background-image: radial-gradient(45px 85px, #ff0000 1px, #990000 30px);
 }
 
 /*-----Advertisement ----*/
-/* line 273, ../sass/screen.scss */
+/* line 341, ../sass/screen.scss */
 .adTuenti {
   height: auto;
   max-width: 100%;
@@ -403,19 +481,19 @@ h3 {
 }
 
 /*-----Footer-----*/
-/* line 282, ../sass/screen.scss */
+/* line 350, ../sass/screen.scss */
 .socialMedia, .weather {
   height: auto;
   max-width: 100%;
   float: left;
 }
 
-/* line 288, ../sass/screen.scss */
+/* line 356, ../sass/screen.scss */
 .weather {
   float: right;
 }
 
-/* line 292, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .bottomBar .banner {
   bottom: 5%;
   text-align: center;
@@ -423,7 +501,7 @@ h3 {
   padding: none;
 }
 
-/* line 299, ../sass/screen.scss */
+/* line 367, ../sass/screen.scss */
 body {
   background-color: #f3f3f3;
 }
